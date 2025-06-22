@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AWS Cloud Storage - Solutions</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+  <style>
+    .sticky-header marquee {
+      width: 100%;
+      padding: 10px 0;
+      color: #074799;
+      font-size: 1rem;
+    }
+    .sticky-header marquee a {
+      text-decoration: none;
+      color: inherit;
+    }
+  </style>
+</head>
+<body>
+  <div class="container py-3">
+    <header>
+      <div class="d-flex flex-column flex-md-row align-items-center pb-3 mb-4 border-bottom">
+        <a href="/" class="d-flex align-items-center link-body-emphasis text-decoration-none">
+          <img src="../IMAGE/icon.png" width="40" height="32" class="me-2" viewBox="0 0 118 94" role="img">
+          <title>Bootstrap</title>
+          <path fill-rule="evenodd" clip-rule="evenodd"
+            d="M24.509 0c-6.733 0-11.715 5.893-11.492 12.284.214 6.14-.064 14.092-2.066 20.577C8.943 39.365 5.547 43.485 0 44.014v5.972c5.547.529 8.943 4.649 10.951 11.153 2.002 6.485 2.28 14.437 2.066 20.577C12.794 88.106 17.776 94 24.51 94H93.5c6.733 0 11.714-5.893 11.491-12.284-.214-6.14.064-14.092 2.066-20.577 2.009-6.504 5.396-10.624 10.943-11.153v-5.972c-5.547-.529-8.934-4.649-10.943-11.153-2.002-6.484-2.28-14.437-2.066-20.577C105.214 5.894 100.233 0 93.5 0H24.508zM80 57.863C80 66.663 73.436 72 62.543 72H44a2 2 0 01-2-2V24a2 2 0 012-2h18.437c9.083 0 15.044 4.92 15.044 12.474 0 5.302-4.01 10.049-9.119 10.88v.277C75.317 46.394 80 51.21 80 57.863zM60.521 28.34H49.948v14.934h8.905c6.884 0 10.68-2.772 10.68-7.727 0-4.643-3.264-7.207-9.012-7.207zM49.948 49.2v16.458H60.91c7.167 0 10.964-2.876 10.964-8.281 0-5.406-3.903-8.178-11.425-8.178H49.948z"
+            fill="currentColor" />
+          </path>
+          <span class="fs-4">AWS</span>
+        </a>
+        <nav class="d-inline-flex mt-2 mt-md-0 ms-md-auto align-items-center">
+          <a class="me-3 py-2 link-body-emphasis text-decoration-none" href="./pricing.html">Pricing</a>
+          <a class="me-3 py-2 link-body-emphasis text-decoration-none" href="./Resources.html">Resources</a>
+          <a class="me-3 py-2 link-body-emphasis text-decoration-none" href="./Solutions.html">Solutions</a>
+          <a class="me-3 py-2 link-body-emphasis text-decoration-none" href="./Support.html">Support</a>
+          <button id="themeToggle" class="btn btn-link p-2" title="Toggle theme">
+            <i class="bi bi-sun-fill"></i>
+          </button>
+        </nav>
+      </div>
+      <div class="sticky-header">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <marquee direction="left" behavior="scroll" scrollamount="5">
+                <a class="arrow-effect" style="color: #074799;">Get 69% Off on Cloud Hosting: Claim Your Offer Now!<svg
+                    class="octicon octicon-chevrow" width="16" height="16" viewBox="0 0 16 16" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path class="octicon-chevrow-right" fill="currentColor"
+                      d="M7.28033 3.21967C6.98744 2.92678 6.51256 2.92678 6.21967 3.21967C5.92678 3.51256 5.92678 3.98744 6.21967 4.28033L7.28033 3.21967ZM11 8L11.5303 8.53033C11.8232 8.23744 11.8232 7.76256 11.5303 7.46967L11 8ZM6.21967 11.7197C5.92678 12.0126 5.92678 12.4874 6.21967 12.7803C6.51256 13.0732 6.98744 13.0732 7.28033 12.7803L6.21967 11.7197ZM6.21967 4.28033L10.4697 8.53033L11.5303 7.46967L7.28033 3.21967L6.21967 4.28033ZM10.4697 7.46967L6.21967 11.7197L7.28033 12.7803L11.5303 8.53033L10.4697 7.46967Z">
+                    </path>
+                    <path class="octicon-chevrow-stem" stroke="currentColor" d="M1.75 8H11" stroke-width="1.5"
+                      stroke-linecap="round"></path>
+                  </svg></a>
+              </marquee>
+            </div>
+          </div>
+        </div>
+      </div>
+      <hr class="mb-5">
+    </header>
+    <main>
+      <!-- Carousel -->
+      <div id="solutionsCarousel" class="carousel slide mb-5" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="d-flex justify-content-center align-items-center bg-body" style="height: 400px;">
+              <div class="text-center">
+                <h1>Cloud Hosting Solutions</h1>
+                <p>Scalable and cost-effective cloud hosting for all business sizes.</p>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="d-flex justify-content-center align-items-center bg-body" style="height: 400px;">
+              <div class="text-center">
+                <h1>Virtual Machines</h1>
+                <p>Powerful and customizable virtual machines for your workloads.</p>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="d-flex justify-content-center align-items-center bg-body" style="height: 400px;">
+              <div class="text-center">
+                <h1>Multi Cloud</h1>
+                <p>Integrated solutions for hybrid and multi-cloud environments.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#solutionsCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#solutionsCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+      <!-- Features -->
+      <div class="row mb-5">
+        <h2 class="display-6 text-center mb-4">Our Solutions</h2>
+        <div class="col-md-4">
+          <div class="text-center">
+            <svg class="bi mb-3" width="48" height="48"><use xlink:href="#cloud"></use></svg>
+            <h3>Cloud Hosting</h3>
+            <p>Flexible and scalable hosting solutions for seamless performance.</p>
+            <a href="#" class="btn btn-outline-secondary">Learn More</a>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="text-center">
+            <svg class="bi mb-3" width="48" height="48"><use xlink:href="#cpu"></use></svg>
+            <h3>Virtual Machines</h3>
+            <p>Robust and customizable VMs for demanding applications.</p>
+            <a href="#" class="btn btn-outline-primary">Learn More</a>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="text-center">
+            <svg class="bi mb-3" width="48" height="48"><use xlink:href="#diagram-3"></use></svg>
+            <h3>Multi Cloud</h3>
+            <p>Unified management for hybrid and multi-cloud setups.</p>
+            <a href="#" class="btn btn-outline-warning">Learn More</a>
+          </div>
+        </div>
+      </div>
+      <!-- Dashboard -->
+      <div class="row mb-5">
+        <h2 class="display-6 text-center mb-4">Manage Your Solutions</h2>
+        <div class="col-md-12">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">AWS Management Console</h5>
+              <p class="card-text">Monitor and manage your cloud resources with our intuitive dashboard.</p>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">Real-time resource monitoring</li>
+                <li class="list-group-item">Automated scaling options</li>
+                <li class="list-group-item">Security and compliance tools</li>
+              </ul>
+              <a href="#" class="btn btn-primary mt-3">Access Dashboard</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Blog -->
+      <div class="row mb-5">
+        <h2 class="display-6 text-center mb-4">Solution Insights</h2>
+        <div class="col-md-4">
+          <div class="card mb-4 shadow-sm">
+            <div class="card-body">
+              <h5 class="card-title">Scaling with AWS</h5>
+              <p class="card-text">How to scale your applications effortlessly with AWS Cloud.</p>
+              <a href="#" class="btn btn-primary">Read More</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card mb-4 shadow-sm">
+            <div class="card-body">
+              <h5 class="card-title">VM Optimization</h5>
+              <p class="card-text">Tips for maximizing performance of AWS virtual machines.</p>
+              <a href="#" class="btn btn-primary">Read More</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card mb-4 shadow-sm">
+            <div class="card-body">
+              <h5 class="card-title">Multi-Cloud Benefits</h5>
+              <p class="card-text">Why a multi-cloud strategy works for modern businesses.</p>
+              <a href="#" class="btn btn-primary">Read More</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Album -->
+      <div class="album py-5 bg-body">
+        <h2 class="display-6 text-center mb-4">Solution Showcase</h2>
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+          <div class="col">
+            <div class="card shadow-sm">
+              <div class="card-body">
+                <p class="card-text">Case Study: E-commerce Scaling.</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                  </div>
+                  <small class="text-muted">PDF</small>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card shadow-sm">
+              <div class="card-body">
+                <p class="card-text">Video: VM Deployment.</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <button type="button" class="btn btn-sm btn-outline-secondary">Watch</button>
+                  </div>
+                  <small class="text-muted">Video</small>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card shadow-sm">
+              <div class="card-body">
+                <p class="card-text">Multi-Cloud Guide.</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <button type="button" class="btn btn-sm btn-outline-secondary">Download</button>
+                  </div>
+                  <small class="text-muted">PDF</small>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="pt-4 my-md-5 pt-md-5 border-top text-bg-secondary rounded-3">
+      <div class="row">
+        <div class="col-12 col-md">
+          <img class="mb-2" src="../IMAGE/icon.png" alt="" width="28" height="22" style="margin-left: 100px;">
+          <h1 style="margin-left: 20px;">AWS Cloud Storage</h1>
+          <small class="d-block mb-3 text-body-secondary" style="margin-left: 20px;">© 2000–2005</small>
+        </div>
+        <div class="col-6 col-md">
+          <h5>Solutions</h5>
+          <ul class="list-unstyled text-small">
+            <li class="mb-1"><a class="link-dark text-decoration-none" href="#">Cloud Hosting India</a></li>
+            <li class="mb-1"><a class="link-dark text-decoration-none" href="#">Manage Cloud Hosting</a></li>
+            <li class="mb-1"><a class="link-dark text-decoration-none" href="#">Virtual Machine Hosting</a></li>
+            <li class="mb-1"><a class="link-dark text-decoration-none" href="#">Cloud Hosting Price</a></li>
+            <li class="mb-1"><a class="link-dark text-decoration-none" href="#">Multi Cloud Hosting</a></li>
+            <li class="mb-1"><a class="link-dark text-decoration-none" href="#">Linux Cloud Hosting</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-md">
+          <h5>Services</h5>
+          <ul class="list-unstyled text-small">
+            <li class="mb-1"><a class="link-dark text-decoration-none" href="#">Devops Services</a></li>
+            <li class="mb-1"><a class="link-dark text-decoration-none" href="#">Cloud Migration</a></li>
+            <li class="mb-1"><a class="link-dark text-decoration-none" href="#">Cloud CDN Services</a></li>
+            <li class="mb-1"><a class="link-dark text-decoration-none" href="#">Backup as a Service</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-md">
+          <h5>About</h5>
+          <ul class="list-unstyled text-small">
+            <li class="mb-1"><a class="link-dark text-decoration-none" href="#">Contact</a></li>
+            <li class="mb-1"><a class="link-dark text-decoration-none" href="#">Locations</a></li>
+            <li class="mb-1"><a class="link-dark text-decoration-none" href="#">Privacy Policy</a></li>
+            <li class="mb-1"><a class="link-dark text-decoration-none" href="#">Terms and Conditions</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+  <script>
+    const html = document.documentElement;
+    const themeToggle = document.getElementById('themeToggle');
+    const themeIcon = themeToggle.querySelector('i');
+
+    const savedTheme = localStorage.getItem('theme') || 'light';
+    html.setAttribute('data-bs-theme', savedTheme);
+    themeIcon.className = savedTheme === 'dark' ? 'bi bi-moon-fill' : 'bi bi-sun-fill';
+
+    themeToggle.addEventListener('mouseover', () => {
+      themeIcon.classList.toggle('bi-sun-fill');
+      themeIcon.classList.toggle('bi-moon-fill');
+    });
+    
+    themeToggle.addEventListener('click', () => {
+      const currentTheme = html.getAttribute('data-bs-theme');
+      const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+      html.setAttribute('data-bs-theme', newTheme);
+      localStorage.setItem('theme', newTheme);
+      themeIcon.className = newTheme === 'dark' ? 'bi bi-moon-fill' : 'bi bi-sun-fill';
+    });
+  </script>
+</body>
+</html>
